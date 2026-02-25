@@ -32,7 +32,7 @@ export default function FilterBar({
       <button
         type="button"
         onClick={toggleLowAttendance}
-        className="text-sm font-medium"
+        className="checkbox-label text-sm font-medium"
       >
         <input type="checkbox" checked={showLowAttendance} readOnly className="mr-2" />
         Show Low Attendance (&lt;75%)

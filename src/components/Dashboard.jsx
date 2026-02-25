@@ -14,6 +14,9 @@ export default function Dashboard({
   toggleAttendanceSortOrder,
 }) {
 
+
+
+
   let filteredStudents = [...students];
 
   if (statusFilter !== "ALL") {
@@ -44,19 +47,20 @@ export default function Dashboard({
 
   return (
     <main className="p-5">
-      <div className="p-4">
-        <header className="mb-4">
+      <div className="p-4 container">
+        <header className="mb-4 page-header">
           <div>
-            <h1 className="text-2xl font-bold">
-              Student Attendance Tracker
-            </h1>
+            <h1 className="text-2xl font-bold">Student Attendance Tracker</h1>
             <p className="text-sm text-gray-600">
               Monitor student presence and attendance performance.
             </p>
           </div>
-          <p className="text-sm">
-            Total students: <span className="font-bold">{students.length}</span>
-          </p>
+
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <p className="text-sm" style={{ margin: 0 }}>
+              Total students: <span className="font-bold">{students.length}</span>
+            </p>
+          </div>
         </header>
 
         <FilterBar
@@ -87,7 +91,7 @@ export default function Dashboard({
                     <button
                       type="button"
                       onClick={toggleAttendanceSortOrder}
-                      className="hover:underline"
+                      className="sort-btn"
                     >
                       Attendance %
                       <span className="ml-2">
